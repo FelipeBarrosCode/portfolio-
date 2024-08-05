@@ -65,6 +65,13 @@ export function CarouselSpacing() {
     
   ] 
 
+  function CarouselPlugin() {
+    var plugin = React.useRef(
+      AutoScroll({  playOnInit: true, stopOnInteraction:false })
+    )
+    
+  }
+
   return (
     <>
      <div className="h-[300px] relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center ">
@@ -72,8 +79,8 @@ export function CarouselSpacing() {
       
      <RevealBottom>
     <Carousel className="w-screen border-t-2 border-b-2 pt-4 pb-4 hover:border-yellow-400 hover:cursor-grab  active:cursor-grabbing focus-within:border-blue-400 "
-    
-    plugins={[AutoScroll({ playOnInit: true, stopOnInteraction:false})]}>
+    /**  @ts-ignore */
+    plugins={[AutoScroll({  playOnInit: true, stopOnInteraction:false })]}>
 
       <CarouselContent className="-ml-4 flex flex-row items-center  ">
         {content.map((value, index) => (

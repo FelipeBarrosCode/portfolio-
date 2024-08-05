@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { AuroraBackgroundDemo } from "./ComponentsForMainPage/Hero";
+
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { AppleCardsCarouselDemo } from "./ComponentsForMainPage/Content";
 import Navbar from "./ComponentsForMainPage/Floatnav";
