@@ -22,6 +22,8 @@ import { AnimatedModalDemo } from "./githubButton"
 import {useRouter} from "next/navigation"
 import { MotionValue, useTransform } from "framer-motion"
 import RevealBottom from "./RevealBottom"
+import Axios from 'axios';
+import { setupCache } from 'axios-cache-interceptor';
 
 
 interface DataFromProjects {
@@ -38,7 +40,10 @@ export function PaginationDemo() {
   const [data, setData] = useState<Array<DataFromProjects>>([])
 
   async function getData() {
-    const content = await axios.get("/api/dataSource")
+    const instance = Axios.create(); 
+  const axios = setupCache(instance);
+  
+    const content = await axios.get("/api/dataSource",{cache:false})
 
     console.log(content)
     setData(content.data)
