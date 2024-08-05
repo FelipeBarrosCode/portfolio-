@@ -38,7 +38,7 @@ export function PaginationDemo() {
   const [data, setData] = useState<Array<DataFromProjects>>([])
 
   async function getData() {
-    const content = await axios.get("http://localhost:3000/api/dataSource")
+    const content = await axios.get("/api/dataSource")
 
     console.log(content)
     setData(content.data)
