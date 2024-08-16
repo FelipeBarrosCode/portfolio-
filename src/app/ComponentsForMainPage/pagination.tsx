@@ -80,7 +80,7 @@ export function PaginationDemo() {
 
 
                 {data.map((value, index) => (
-                  <CarouselItem key={index} className=" md:basis-1/3 max-[560px]:basis-full max-[766px]:basis-1/2 lg:basis-1/3 ">
+                  <CarouselItem key={index} className=" md:basis-9/12  lg:basis-1/3 ">
 
                     <Card className=" shadow-lg shadow-black bg-white border-none justify-between  flex flex-col h-[500px]   p-5">
 

@@ -53,7 +53,7 @@ export default function ExperienceSection(){
             experience.map((value,index)=>(
 
                 
-                <div className={`w-1/2 h-max p-7   text-white   ${index%2 ==0? ' self-start flex flex-col ':' self-end  flex flex-col items-end text-end'}`} key={index}>
+                <div className={`w-1/2 h-max p-7 max-[751px]:w-full   text-white   ${index%2 ==0? ' self-start flex flex-col ':' self-end  flex flex-col items-end text-end'}`} key={index}>
                         <RevealSide className={`${index%2 ==0? ' text-start self-start':'text-start self-end'} h-max flex flex-col text-white gap-10`}  key={index} leftOrRight={(index%2 == 0 ? "+":"-")}>
                         <>
                         <h1 className='mb-7 text-4xl'> {value.title} </h1>

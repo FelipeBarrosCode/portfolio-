@@ -12,7 +12,7 @@ export function AboutMe() {
     <div className="h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center ">
    
     <RevealBottom>
-      <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
+      <p className="text-neutral-500 w-11/12 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
         
       Hi, I&#39;m Felipe Barros Moura, a Full Stack developer with over a year of experience crafting {" "} 
       <LinkPreview url="https://github.com/FelipeBarrosCode" className="font-bold text-white">
