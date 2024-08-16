@@ -75,7 +75,7 @@ export function CarouselSpacing() {
   return (
     <>
      <div className="h-[300px] relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center ">
-     <div className="absolute inset-0 w-full h-[300px] bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+     
       
      <RevealBottom>
     <Carousel className="w-screen border-t-2 border-b-2 pt-4 pb-4 hover:border-yellow-400 hover:cursor-grab  active:cursor-grabbing focus-within:border-blue-400 "

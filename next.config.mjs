@@ -2,8 +2,10 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
+      
     domains: ['images.unsplash.com',
-      "api.microlink.io"
+      "api.microlink.io",
+      "avatars.githubusercontent.com"
     ],
   },
 };

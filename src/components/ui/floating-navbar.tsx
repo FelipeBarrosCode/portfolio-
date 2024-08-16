@@ -14,6 +14,9 @@ import ImageGit from "../../../public/github.svg"
 import ImageLinkedin from "../../../public/linkedin.svg"
 import ImageProjects from "../../../public/blueprint-svgrepo-com.svg"
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import profile from "../../../public/myprofile.svg"
+import Axios from 'axios';
+import { setupCache } from 'axios-cache-interceptor';
 
 
 interface propsToSubObj{
@@ -35,11 +38,17 @@ export const FloatingNav = ({
     }[];
     className?: string;
 }) => {
+
+   
+
+    
+
+    
     const { scrollYProgress } = useScroll();
 
     const [visible, setVisible] = useState(false);
     const [arrayOfItems, setArrayOfItems] = useState<any>([]);
-    const contentTpoRender:Array<propsToSubObj> = [{ id:1, name:"Git Hub",urlLink:"https://github.com/FelipeBarrosCode",image:ImageGit, designation:"My Git Hub"},{id:2,name:"LinkedIn",urlLink:"https://www.linkedin.com/in/felipe-barros-moura-773595261/",image:ImageLinkedin, designation:"My Linkedin"}, {id:3,name:"My Projects",urlLink:"/#content",image:ImageProjects, designation:"My Projects"}]
+    const contentTpoRender:Array<propsToSubObj> = [{id:1,name:"Felipe",urlLink:"/",image:profile,designation:"Owner"},{ id:2, name:"Git Hub",urlLink:"https://github.com/FelipeBarrosCode",image:ImageGit, designation:"My Git Hub"},{id:3,name:"LinkedIn",urlLink:"https://www.linkedin.com/in/felipe-barros-moura-773595261/",image:ImageLinkedin, designation:"My Linkedin"}, {id:4,name:"My Projects",urlLink:"/#content",image:ImageProjects, designation:"My Projects"}]
     
     useMotionValueEvent(scrollYProgress, "change", (current) => {
         // Check if current is not undefined and is a number
@@ -105,7 +114,7 @@ export const FloatingNav = ({
                 )}
             >
                 
-                <div className="flex-row flex gap-10">
+                <div className="flex-row w-full flex  justify-around">
                 <AnimatedTooltip items={contentTpoRender} />
                 </div>
                 

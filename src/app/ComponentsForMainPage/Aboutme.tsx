@@ -10,7 +10,7 @@ export function AboutMe() {
 
  
     <div className="h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center ">
-    <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+   
     <RevealBottom>
       <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
         
@@ -19,7 +19,7 @@ export function AboutMe() {
       web applications. 
       </LinkPreview>{" "}
       Currently studying Computer Science at 
-      <LinkPreview url="https://tailwindcss.com" className="font-bold text-white">{" "} 
+      <LinkPreview url="https://langara.ca/" className="font-bold text-white">{" "} 
       Langara College 
       </LinkPreview>{" "}
       in Vancouver, 
