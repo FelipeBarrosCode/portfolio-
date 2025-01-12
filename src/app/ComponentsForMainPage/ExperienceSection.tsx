@@ -24,7 +24,7 @@ export default function ExperienceSection(){
     }, [inView]);
 
     const experience:Array<ArrayOfExperinece>=[{
-        title:"Software Devloper",
+        title:"Software Developer",
         company:"Langara Computer Science Club",
         time:"04-2024 to present",
         description:"As part of a team, I was responsible for implementing frontend designs and logic for multiple club websites focused on events and associated tools. To accomplish this, I leveraged a diverse toolset including Tailwind CSS, Next.js, TypeScript, Git, and GitHub",
@@ -46,7 +46,7 @@ export default function ExperienceSection(){
         <div className="h-max relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center">
             
 
-            <h1 className='text-white text-5xl'>Experinece </h1>
+            <h1 className='text-white text-5xl'>Experience </h1>
 
 
         {
