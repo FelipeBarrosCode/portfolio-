@@ -1,5 +1,5 @@
 
-import { motion, useInView } from 'framer-motion';
+import { useScroll, useInView, motion, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import RevealSide from './RevealSide';
 
@@ -14,16 +14,28 @@ interface ArrayOfExperinece{
 export default function ExperienceSection(){
 
     const ref = useRef(null)
-    const inView  = useInView(ref);
+    const { scrollYProgress } = useScroll()
+    const scaleY = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001,
+    })
+      const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+   
 
-    useEffect(() => {
-        if (inView) {
-
-            // Optional: Add logic for animation completion or other actions
-        }
-    }, [inView]);
-
-    const experience:Array<ArrayOfExperinece>=[{
+    const experience:Array<ArrayOfExperinece>=[
+        {
+            title:"Dishwasher",
+            company:"Cactus Club Cafe",
+            time:"09-2024 to present",
+            description:`I keep the kitchen running smoothly by cleaning and organizing dishes, utensils, and equipment. My role ensures a clean, hygienic workspace, supporting the team and contributing to a great dining experience.`,
+            whatILearned:"Time Management, Attention to Detail, Teamwork, Adaptability, Work Ethic, Organization, Problem-Solving, Resilience"
+    
+    
+    
+        },
+        
+        {
         title:"Software Developer",
         company:"Langara Computer Science Club",
         time:"04-2024 to present",
@@ -45,9 +57,25 @@ export default function ExperienceSection(){
 
         <div className="h-max relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center">
             
+            
 
             <h1 className='text-white text-5xl'>Experience </h1>
-
+            
+           
+      {/* Element to stretch vertically */}
+      <motion.div
+                id="vertical-scroll-indicator"
+                style={{
+                    scaleY,
+                    position: "absolute",
+                    top: "10%",
+                    left: "50%", // Adjust this value to position between your components
+                    width: 5,
+                    height: "100vh",
+                    originY: 0, // Makes the scaling originate from the top
+                    backgroundColor: "white",
+                }}
+            />
 
         {
             experience.map((value,index)=>(
