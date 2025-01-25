@@ -71,7 +71,7 @@ export default function ExperienceSection(){
                     top: "10%",
                     left: "50%", // Adjust this value to position between your components
                     width: 5,
-                    height: "100vh",
+                    height: "200vh",
                     originY: 0, // Makes the scaling originate from the top
                     backgroundColor: "white",
                 }}
