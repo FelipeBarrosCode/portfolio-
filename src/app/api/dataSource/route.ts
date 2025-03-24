@@ -7,7 +7,12 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request:NextRequest){
 
-    const content = await axios.get("https://api.github.com/users/FelipeBarrosCode/repos")
+    const content = await axios.get("https://api.github.com/users/FelipeBarrosCode/repos", {
+        headers: {
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+        },
+        
+    })
 
     let arrWithContents: Array<object> = []
     content.data.map((value: {
